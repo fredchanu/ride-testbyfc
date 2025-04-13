@@ -27,12 +27,15 @@
       N'hésite pas à m'écrire via ce formulaire, ou directement par mail ou sur TikTok.
     </p>
 
-    <form action="mailto:frederic.chanu@orange.fr" method="post" enctype="text/plain" style="margin-top: 40px;">
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+
       <input type="text" name="nom" placeholder="Ton nom" required />
       <input type="email" name="email" placeholder="Ton email" required />
       <textarea name="message" rows="6" placeholder="Ton message..." required></textarea>
       <button type="submit">Envoyer</button>
     </form>
+    
 
     <div class="contact-links">
       <a href="mailto:vttfred61@gmail.com" class="contact-link">
