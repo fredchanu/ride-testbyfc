@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Sacoche RockBros - Ride & Test by FC</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+<header>
+  <a href="/index.html"><img src="/assets/images/logo.png" alt="Ride & Test by FC" class="logo" /></a>
+  <nav>
+    <ul>
+      <li><a href="/home.html">Accueil</a></li>
+      <li><a href="/vtt.html">Mon VTT</a></li>
+      <li><a href="/tests.html">Tests</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main style="margin-top: 10px;">
+  <section class="test-detail">
+    <h1>Sacoche de selle RockBros</h1>
+    <div class="slider-container">
+      <div class="slider-track">
+        <img src="/assets/images/sacoche.JPG" alt="Mini sacoche de selle RockBros" />
+        <img src="/assets/images/sacoche-2.JPG" alt="mini-sacoche-rockbros" />
+        <img src="/assets/images/sacoche-3.JPG" alt="Mini sacoche de selle RockBros" />
+      </div>
+      <button class="slider-btn prev">←</button>
+      <button class="slider-btn next">→</button>
+    </div>
+    <div class="test-description">
+      <h2>Mon avis</h2>
+      <p>Compacte, légère et bien fixée, la sacoche RockBros est parfaite pour les sorties courtes et moyennes avec un volume de 0.35L. Elle résiste bien à l'eau, tient fermement sous la selle grâce à ses bandes velcro solides, et permet d’emporter une chambre à air, un démonte-pneu, kit de mèches et quelques outils en fonction des besoins de chacun.</p>
+      <p>La sacoche RockBros est une option pratique pour ceux qui cherchent une sacoche de selle compacte et pratique pour leurs sorties.</p>
+      <h3>✅ Les plus :</h3>
+      <ul>
+        <li>Fixation simple et efficace</li>
+        <li>Imperméable</li>
+        <li>Légère et discrète</li>
+        <li>Existe en plusieurs couleurs</li>
+      </ul>
+      <h3>❌ Les moins :</h3>
+      <ul>
+        <li>Capacité limitée pour les longues distances</li>
+      </ul>
+      <h3>Verdict :</h3>
+      <p>Une sacoche compacte et fiable pour ceux qui veulent partir léger sans sac à dos. Elle fait parfaitement le job.</p>
+      <p><strong>Note finale :</strong> ⭐️⭐️⭐️⭐️☆ (4.5/5)</p>
+      <p><strong>Tarif :</strong> Environ 9.99 €</p>
+      <div class="hero-buttons">
+      <p><a href="https://s.click.aliexpress.com/e/_oob1Tir" target="_blank" class="btn-orange">Voir le produit</a></p>
+      </div>
+      <div class="back-button">
+        <a href="/tests.html" class="btn-retour">← Retour à la liste des tests</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const track = document.querySelector('.slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+
+  let index = 0;
+
+  const updateSlider = () => {
+    const slideWidth = track.clientWidth;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  };
+
+  nextBtn.addEventListener('click', () => {
+    if (index < track.children.length - 1) {
+      index++;
+      updateSlider();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (index > 0) {
+      index--;
+      updateSlider();
+    }
+  });
+
+  window.addEventListener('resize', updateSlider);
+</script>  
+
+<footer>
+  <p>&copy; 2025 Ride & Test by FC</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ride & Test by FC</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <section class="hero-image">
+    <img src="assets/images/hero-vtt.jpg" alt="Mon VTT" class="hero-img" />
+    <div class="hero-text">
+      <h1>Ride & Test by FC</h1>
+      <p>Découvre mes tests terrain & expériences VTT</p>
+      <div class="hero-buttons">
+        <a href="home.html" class="btn-orange btn-enter">Entrer sur le site</a>
+        <a href="tests.html" class="btn-dark btn-tests">Voir les tests</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const enterBtn = document.querySelector('.btn-enter');
+    const testBtn = document.querySelector('.btn-tests');
+    const hero = document.querySelector('.hero-image');
+  
+    enterBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      hero.classList.add('hero-zoom');
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 1500);
+    });
+  
+    testBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      hero.classList.add('hero-fade');
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 700);
+    });
+  </script>
+  
+</body>
+</html>

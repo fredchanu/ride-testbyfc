@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Porte-gourde Carbone - Ride & Test by FC</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+<header>
+  <a href="/index.html"><img src="/assets/images/logo.png" alt="Ride & Test by FC" class="logo" /></a>
+  <nav>
+    <ul>
+      <li><a href="/home.html">Accueil</a></li>
+      <li><a href="/vtt.html">Mon VTT</a></li>
+      <li><a href="/tests.html">Tests</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<main style="margin-top: 10px;">
+  <section class="test-detail">
+    <h1>Porte-gourde Carbone ultra léger</h1>
+    <div class="slider-container">
+        <div class="slider-track">
+          <img src="/assets/images/porte-gourde-1.jpg" alt="Vue de face" />
+          <img src="/assets/images/porte-gourde-2.jpg" alt="Vue de côté" />
+          <img src="/assets/images/porte-gourde-3.jpg" alt="Monté sur le vélo" />
+        </div>
+        <button class="slider-btn prev">←</button>
+        <button class="slider-btn next">→</button>
+      </div>
+
+    <div class="test-description">
+      <h2>Mon avis</h2>
+      <p>
+        J’ai monté ce porte-gourde sur mon VTT pour tester sa légèreté et son efficacité en conditions réelles. À seulement 22g, il est presque invisible une fois en place. L’aspect carbone mat est soigné et discret. Le maintien de la gourde est ferme, même en descente ou sur du cassant.
+      </p>
+      <p>
+        En roulant, on sent qu’il faut être un peu précis pour replacer la gourde rapidement, mais rien de bloquant. Ce type de porte-gourde est idéal pour ceux qui cherchent à alléger leur montage sans perdre en fonctionnalité.
+      </p>
+      <p>
+        Ce porte-gourde ultra léger trouve tout son intérêt sur un VTT tout suspendu où l’espace dans le triangle avant est souvent limité. Grâce à sa compacité, il permet d’ajouter facilement un deuxième bidon sous le tube diagonal, sans gêner l’amortisseur ni le dégagement du cadre.
+        </p>
+        
+
+      <h3>✅ Les plus :</h3>
+      <ul>
+        <li>Ultra léger (22g mesurés)</li>
+        <li>Bonne tenue de la gourde</li>
+        <li>Look discret et propre</li>
+        <li>Bon rapport qualité/prix</li>
+      </ul>
+
+      <h3>❌ Les moins :</h3>
+      <ul>
+        <li>Peut demander un peu d’attention pour remettre la gourde rapidement, surtout en roulant… mais rien de vraiment gênant.</li>
+      </ul>
+
+      <h3>Verdict :</h3>
+      <p>
+      Léger, discret et bien fini, ce porte-gourde en carbone est un excellent choix pour les amateurs de montage optimisé. Il remplit parfaitement son rôle, même sur terrain engagé, et se prête très bien à un montage double bidon sur un tout-suspendu. À ce prix, difficile de trouver mieux !
+      </p>
+      
+      <p><strong>Note finale :</strong> ⭐️⭐️⭐️⭐️⭐️ (5/5)</p>
+      <p><strong>Tarif :</strong> Environ 14 €</p>
+<p>
+    <div class="hero-buttons">
+  <a href="https://s.click.aliexpress.com/e/_oCXTQgH" target="_blank" rel="noopener" class="btn-orange">Voir le produit</a>
+    </div>
+</p>
+
+      
+    <div class="back-button">
+        <a href="/tests.html" class="btn-retour">← Retour à la liste des tests</a>
+      </div>      
+      
+  </section>
+</main>
+<script>
+    const track = document.querySelector('.slider-track');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
+  
+    let index = 0;
+  
+    const updateSlider = () => {
+      const slideWidth = track.clientWidth;
+      track.style.transform = `translateX(-${index * slideWidth}px)`;
+    };
+  
+    nextBtn.addEventListener('click', () => {
+      if (index < track.children.length - 1) {
+        index++;
+        updateSlider();
+      }
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      if (index > 0) {
+        index--;
+        updateSlider();
+      }
+    });
+  
+    window.addEventListener('resize', updateSlider);
+  </script>  
+
+<footer>
+  <p>&copy; 2025 Ride & Test by FC</p>
+</footer>
+</body>
+</html>
