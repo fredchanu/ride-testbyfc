@@ -2,66 +2,97 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tests Matos - Ride & Test by FC</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tests de Matériel - Ride & Test by FC</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/menu_responsive.css">
+  <script src="/assets/js/menu_toggle.js"></script>
 </head>
-<body>
-<header>
-  <a href="index.html">
-    <img src="assets/images/logo.png" alt="Ride & Test by FC" class="logo" />
-  </a>
-  <nav>
-    <ul>
-      <li><a href="home.html">Accueil</a></li>
-      <li><a href="vtt.html">Mon VTT</a></li>
-      <li><a href="tests.html">Tests</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-<main style="margin-top:80px;">
-  <section class="tests-list">
-    <article class="test-card">
-      <img src="assets/images/porte-gourde-1.jpg" alt="Porte-gourde carbone" />
-      <div class="test-card-content">
-        <h3>Porte-gourde carbone</h3>
-        <p>Léger, discret et efficace : un test complet de ce porte-gourde ultra light.</p>
-        <div class="hero-buttons">
-        <a href="tests/porte-gourde-carbone.html" class="btn-orange">Lire le test</a>
-        </div>
+<body class="with-sticky-footer">
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/assets/images/logo.webp" alt="Ride & Test by FC">
       </div>
-    </article>
+      
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="tests.html" class="active">Tests</a></li>
+        <li><a href="conseils.html">Conseils</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="tests-page">
+    <section class="tests-intro">
+      <h1>Tests de Matériel VTT</h1>
+      <p>Retours d’expérience honnêtes sur les composants que j’ai réellement testés. Ici, pas de blabla marketing, que du terrain !</p>
+    </section>
 
-    <article class="test-card">
-      <img src="assets/images/sacoche.jpg" alt="mini sacoche de selle RockBros" />
-      <div class="test-card-content">
-        <h3>Sacoche de selle</h3>
-        <p>Léger, discret et efficace : un test complet de ce porte-gourde ultra light.</p>
-        <div class="hero-buttons">
-        <a href="tests/mini-sacoche-rockbros.html" class="btn-orange">Lire le test</a>
-        </div>
-      </div>
-    </article>
+    <section class="tests-grid">
+      <article class="test-card">
+        <img src="/assets/images/image_tests/orbea-oiz-m30.webp" alt="Orbea Oiz M30 2024">
+        <h2>Orbea Oiz M30</h2>
+        <p>Un vélo XC nerveux et léger – test longue durée.</p>
+        <a href="tests/orbea-oiz-m30.html" class="btn">Voir le test</a>
+      </article>
 
-    <article class="test-card">
-      <img src="assets/images/plateau-oval.jpg" alt="Plateau oval Burgtec" />
-      <div class="test-card-content">
-        <h3>Plateau oval Burgtec</h3>
-        <p>Léger, discret et efficace : un test complet de ce porte-gourde ultra light.</p>
-        <div class="hero-buttons">
-        <a href="tests/plateau-oval-burgtec.html" class="btn-orange">Lire le test</a>
-        </div>
-      </div>
-    </article>
+      <article class="test-card">
+        <img src="/assets/images/image_tests/sacoche.webp" alt="Sacoche Rockbros">
+        <h2>Sacoche Rockbros</h2>
+        <p>Compacte et pratique pour le XC – test complet.</p>
+        <a href="tests/sacoche-rockbros.html" class="btn">Voir le test</a>
+      </article>
+    
+      <article class="test-card">
+        <img src="/assets/images/image_tests/porte-gourde-1.webp" alt="Porte-gourde carbone">
+        <h2>Porte-gourde carbone</h2>
+        <p>Léger et fiable pour la compétition.</p>
+        <a href="tests/porte-gourde.html" class="btn">Voir le test</a>
+      </article>
+    
+      <article class="test-card">
+        <img src="/assets/images/image_tests/plateau-oval.webp" alt="Plateau ovale Burgtec">
+        <h2>Plateau ovale Burgtec</h2>
+        <p>Un vrai plus en montée ? On a testé.</p>
+        <a href="tests/plateau-burgtec.html" class="btn">Voir le test</a>
+      </article>
+
+      <article class="test-card">
+        <img src="/assets/images/image_tests/sacoche-smartphone.webp" alt="Sacoche Rockbros smartphone">
+        <h2>Sacoche Rockbros smartphone</h2>
+        <p>Transport, rangement et téléphone visible – pratique ou gadget ?</p>
+        <a href="tests/sacoche-smartphone.html" class="btn">Voir le test</a>
+      </article>
+      
+      <article class="test-card">
+        <img src="/assets/images/image_tests/casque-hjc.webp" alt="Casque HJC VTT XC">
+        <h2>Casque HJC MTB / XC</h2>
+        <p>Design, confort, ventilation – notre avis terrain.</p>
+        <a href="tests/casque-hjc.html" class="btn">Voir le test</a>
+      </article>
+      <!-- Suite des autres articles de tests ici */ -->
+    </section>    
+  </main>
   
-    <!-- Tu peux dupliquer ce bloc pour chaque test -->
-  </section>
-  
-  
-</main>
-<footer>
-  <p>&copy; 2025 Ride & Test by FC</p>
-</footer>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="current-year"></span> Ride & Test by FC</p>
+      <p>
+        <a href="/pages legales/mentions-legales.html" target="_blank">Mentions légales</a> |
+        <a href="/pages legales/politique-confidentialite.html" target="_blank">Politique de confidentialité</a>
+      </p>
+    </div>
+  </footer>
+  <script src="/assets/js/footer-year.js"></script>
+
 </body>
 </html>

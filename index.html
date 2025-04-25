@@ -1,47 +1,108 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ride & Test by FC</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil - Ride & Test by FC</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/menu_responsive.css">
+  <script src="/assets/js/menu_toggle.js"></script>
 </head>
-<body>
-
-  <section class="hero-image">
-    <img src="assets/images/hero-vtt.jpg" alt="Mon VTT" class="hero-img" />
-    <div class="hero-text">
-      <h1>Ride & Test by FC</h1>
-      <p>Découvre mes tests terrain & expériences VTT</p>
-      <div class="hero-buttons">
-        <a href="home.html" class="btn-orange btn-enter">Entrer sur le site</a>
-        <a href="tests.html" class="btn-dark btn-tests">Voir les tests</a>
+<body class="homepage">
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/assets/images/logo.webp" alt="Ride & Test by FC">
       </div>
+
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="menu">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="tests.html">Tests</a></li>
+        <li><a href="conseils.html">Conseils</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="/assets/images/hero-vtt.webp" alt="Mon VTT" class="hero-img">
+    <div class="hero-content">
+      <h1 class="hero-title">Ride & Test by FC</h1>
+      <p>Les meilleurs tests et conseils pour votre passion VTT</p>
+      <a href="tests.html" class="cta">Voir les tests</a>
     </div>
   </section>
 
-  <script>
-    const enterBtn = document.querySelector('.btn-enter');
-    const testBtn = document.querySelector('.btn-tests');
-    const hero = document.querySelector('.hero-image');
-  
-    enterBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      hero.classList.add('hero-zoom');
-      setTimeout(() => {
-        window.location.href = this.href;
-      }, 1500);
-    });
-  
-    testBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      hero.classList.add('hero-fade');
-      setTimeout(() => {
-        window.location.href = this.href;
-      }, 700);
-    });
-  </script>
+  <main>
+    <section class="featured">
+      <h2>À la une</h2>
+      <div class="grid">
+        <article class="teaser">
+          <img src="/assets/images/image_tests/sacoche.webp" alt="Sacoche Rockbros">
+          <h3>Sacoche Rockbros</h3>
+          <p>Compacte, résistante et bien pensée : test longue durée sur terrain mixte.</p>
+          <a href="tests.html#sacoche" class="btn">Lire le test</a>
+        </article>
+        <article class="teaser">
+          <img src="/assets/images/image_tests/porte-gourde-1.webp" alt="Porte-gourde carbone">
+          <h3>Porte-gourde Carbone</h3>
+          <p>Léger, discret, maintien parfait de la gourde en cross-country.</p>
+          <a href="tests.html#portegourde" class="btn">Voir le retour</a>
+        </article>
+        <article class="teaser">
+          <img src="/assets/images/image_tests/plateau-oval.webp" alt="Plateau ovale Burgtec">
+          <h3>Plateau Ovale Burgtec</h3>
+          <p>Un gain en fluidité et en motricité : qu’apporte réellement le profil ovale ?</p>
+          <a href="tests.html#plateauburgtec" class="btn">Découvrir</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONSEILS -->
+    <section class="double-split">
+      <div class="split-block" style="background-image: url('/assets/images/orbea-detail-suspension.webp');">
+        <div class="overlay-text">
+          <h2>Conseils & Tutoriels</h2>
+          <ul>
+            <li>✅ Entretien & nettoyage</li>
+            <li>✅ Réglages suspension</li>
+            <li>✅ Choix de composants</li>
+          </ul>
+          <a href="conseils.html" class="btn">Voir les conseils</a>
+        </div>
+      </div>
+      <div class="split-block" style="background-image: url('/assets/images/img-service.webp');">
+        <div class="overlay-text">
+          <h2>Nos Services</h2>
+          <ul>
+            <li>🌐 Création de sites vélo</li>
+            <li>📱 Mobile & personnalisé</li>
+            <li>🛠️ Maintenance incluse</li>
+          </ul>
+          <a href="services.html" class="btn">Voir les services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="current-year"></span> Ride & Test by FC</p>
+      <p>
+        <a href="/pages legales/mentions-legales.html" target="_blank">Mentions légales</a> |
+        <a href="/pages legales/politique-confidentialite.html" target="_blank">Politique de confidentialité</a>
+      </p>
+    </div>
+  </footer>
+  <script src="/assets/js/footer-year.js"></script>
   
 </body>
 </html>

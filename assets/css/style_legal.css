@@ -1,0 +1,50 @@
+/* Style commun pour les pages Mentions légales et Politique de confidentialité */
+body {
+  background-color: #f5f1e8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  color: #333;
+  line-height: 1.8;
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  font-size: 2em;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #ffa500;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #444;
+  border-left: 4px solid #ffa500;
+  padding-left: 10px;
+  font-size: 1.3em;
+}
+
+p, li {
+  font-size: 1.05em;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
