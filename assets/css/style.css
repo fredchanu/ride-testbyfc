@@ -13,26 +13,31 @@ body.with-sticky-footer {
 body.with-sticky-footer main {
   flex: 1;
 }
-h1 {
+h1, h2 {
   position: relative;
-  font-size: 2em;
-  margin-bottom: 30px;
-  text-align: center;
-  color: #222;
+  display: inline-block;
+  margin-bottom: 20px;
 }
-h1::after {
+h1::after, h2::after {
   content: '';
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -10px;
-  width: 60px;
-  height: 4px;
-  background: #ffa500;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 50%;
+  background-color: #FFA500;
   border-radius: 2px;
 }
 body.homepage {
   background-color: #f5f1e8;
+}
+/* Effet hover léger sur toutes les images */
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
 }
 
 /*--------------------------------------------------------------------------*/
@@ -52,6 +57,13 @@ nav {
 }
 .logo img {
   height: 60px;
+}
+.slogan {
+  font-size: 14px;
+  color: #FFA500;
+  text-align: center;
+  margin-top: 5px;
+  font-style: italic;
 }
 .menu {
   list-style: none;
@@ -98,6 +110,11 @@ nav {
   padding: 20px;
   border-radius: 10px;
 }
+.hero-subtitle {
+  margin-top: 15px;
+  font-size: 20px;
+  color: white;
+}
 .hero-title {
   color: #fff8e1;
   text-shadow: 0 0 10px #ffa500, 0 0 20px #ffa500;
@@ -126,29 +143,7 @@ nav {
 /* sections */
 .featured, .teaser-section {
   padding: 40px 20px;
-  
   text-align: center;
-}
-.content-section h2,
-.featured h2,
-.teaser-section h2 {
-  position: relative;
-  font-size: 2em;
-  color: #222;
-  margin-bottom: 20px;
-}
-.content-section h2::after,
-.featured h2::after,
-.teaser-section h2::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -5px;
-  height: 4px;
-  width: 60px;
-  background: #ffa500;
-  border-radius: 2px;
 }
 .grid {
   display: flex;
@@ -156,23 +151,43 @@ nav {
   gap: 20px;
   justify-content: center;
 }
+
 .teaser {
   background: #f4f4f4;
   padding: 15px;
   border-radius: 8px;
   max-width: 300px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 550px;
+}
+.featured h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+.teaser h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 .teaser img {
   width: 100%;
+  border-radius: 8px;
   height: auto;
 }
-.teaser-section {
-  position: relative;
-  color: #222;
-  text-align: center;
-  padding: 60px 20px;
+.teaser p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  margin-top: auto;
 }
+.teaser .btn-main {
+  display: block;
+  text-align: center;
+  margin-top: auto;
+}
+
 .double-split {
   display: flex;
   flex-wrap: wrap;
@@ -198,7 +213,7 @@ nav {
 .overlay-text h2 {
   margin-bottom: 15px;
   color: #222;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .overlay-text ul {
   list-style: none;
@@ -230,7 +245,7 @@ nav {
 .tests-page {
   background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.6)),
               url('/assets/images/bg-tests.webp') center/cover no-repeat;
-  padding: 40px 0;
+  padding: 20px 0;
   background-attachment: fixed;
 }
 .tests-intro {
@@ -242,63 +257,8 @@ nav {
   margin-bottom: 10px;
 }
 .tests-intro p {
-  font-size: 1em;
+  font-size: 1.1em;
   color: #444;
-}
-.tests-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  padding: 40px 20px;
-  align-items: stretch;
-}
-.test-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: #f4f4f4;
-  border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-  transition: transform 0.3s;
-  height: 100%;
-  min-height: 400px;
-}
-.test-card:hover {
-  transform: translateY(-5px);
-}
-.test-card img {
-  border-radius: 6px;
-  margin-bottom: 15px;
-  max-height: 180px;
-  width: auto;
-  margin: 0 auto 15px auto;
-  object-fit: contain;
-}
-.test-card h2 {
-  margin: 10px 0;
-  font-size: 1.2em;
-}
-.test-card p {
-  font-size: 1em;
-  color: #444;
-}
-.test-card .btn {
-  margin-top: auto;
-  display: inline-block;
-  background: #ffa500;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-@media screen and (max-width: 768px) {
-  .test-card {
-    max-width: 100%;
-  }
 }
 
 /*--------------------------------------------------------------------------*/
@@ -306,7 +266,7 @@ nav {
 .conseils-page {
   background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
               url('/assets/images/bg-conseil.webp') center/cover no-repeat;
-  padding: 40px 0;
+  padding: 20px 0;
   background-attachment: fixed;
 }
 .conseils-list {
@@ -330,6 +290,9 @@ nav {
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   min-height: 200px;
   text-align: center;
+}
+.intro h1 {
+  font-size: 2em;
 }
 .conseil h2 {
   margin-bottom: 10px;
@@ -368,7 +331,7 @@ nav {
   background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.6)),
               url('/assets/images/bg-service.webp') center/cover no-repeat;
   background-attachment: fixed;
-  padding: 40px 20px;
+  padding: 30px 0px;
 }
 .intro {
   text-align: center;
@@ -393,7 +356,7 @@ nav {
 }
 .service-card h2 {
   margin-bottom: 15px;
-  font-size: 1.4em;
+  font-size: 1.5em;
   color: #222;
 }
 .service-card p {
@@ -416,7 +379,7 @@ nav {
 /*Page a propos*/
 .about-page {
   background-color: #f5f1e8;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 .intro {
   text-align: center;
@@ -437,7 +400,7 @@ nav {
 }
 .about-content {
   flex: 1;
-  font-size: 1.05em;
+  font-size: 1.0em;
   line-height: 1.8;
   color: #333;
 }
@@ -458,11 +421,19 @@ nav {
 /*Page contact*/
 .contact-page {
   background-color: #f5f1e8;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 .contact-intro {
   text-align: center;
   margin-bottom: 40px;
+}
+.contact-intro h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+} 
+.contact-intro p {
+  font-size: 1.1em;
+  color: #444;
 }
 .contact-content {
   max-width: 800px;
@@ -536,16 +507,44 @@ button:hover {
 
 /*--------------------------------------------------------------------------*/
 /* boutons */
-.btn, .cta {
+.btn-main {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 10px 20px;
-  background: #ffa500;
+  background-color: #FFA500;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background-color 0.3s;
 }
 
+.btn-main:hover {
+  background-color: #e69500;
+}
+
+.cta-buttons {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #FFA500;
+  border: 2px solid #FFA500;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #FFA500;
+  color: white;
+}
 /*--------------------------------------------------------------------------*/
 /* pied de page */
 footer {
@@ -610,22 +609,7 @@ footer a:hover {
   font-size: 2em;
   margin-bottom: 10px;
 }
-.test-detail h1::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: #ffa500;
-  margin: 10px auto;
-  border-radius: 2px;
-}
-.test-detail h2 {
-  margin-top: 30px;
-  color: #444;
-  border-left: 4px solid #ffa500;
-  padding-left: 10px;
-  font-size: 1.4em;
-}
+
 .test-detail a {
   color: #ffa500;
   font-weight: bold;
