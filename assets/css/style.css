@@ -122,6 +122,8 @@ nav {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+
 @media screen and (max-width: 768px) {
   .hero-img {
     height: auto;
