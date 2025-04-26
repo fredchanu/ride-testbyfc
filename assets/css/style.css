@@ -582,6 +582,20 @@ footer a:hover {
   color: #e68a00;
   text-decoration: underline;
 }
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #FFA500;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
 
 /*--------------------------------------------------------------------------*/
 /*style_tests_unitaire*/
