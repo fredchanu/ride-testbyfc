@@ -241,7 +241,25 @@ nav {
   font-size: 1.1em;
   margin: 5px 0;
 }
+.cta-section {
+  background-color: #f5f1e8;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
 
+.cta-section h2 {
+  font-size: 1.7em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 /*--------------------------------------------------------------------------*/
 /*page tests*/
 .tests-page {
@@ -523,11 +541,6 @@ button:hover {
 
 .btn-main:hover {
   background-color: #e69500;
-}
-
-.cta-buttons {
-  margin: 40px auto;
-  text-align: center;
 }
 
 .btn-secondary {
