@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ridetestbyfc.netlify.app/sitemap.xml
+Sitemap: https://ridetestbyfc.fr/sitemap.xml
