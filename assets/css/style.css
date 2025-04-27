@@ -190,6 +190,45 @@ nav {
   text-align: center;
   margin-top: auto;
 }
+.wishlist-tests {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Léger fond pour démarquer */
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.wishlist-tests h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.wishlist-tests p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.wishlist-tests ul {
+  list-style: disc;
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+.wishlist-tests li {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.wishlist-tests a {
+  color: #004d00; 
+  text-decoration: underline;
+}
+
+.wishlist-tests a:hover {
+  text-decoration: none;
+}
 
 .double-split {
   display: flex;
@@ -325,15 +364,6 @@ nav {
   font-size: 1em;
   color: #444;
   margin-bottom: 20px;
-}
-.conseil .btn {
-  align-self: center;
-  display: inline-block;
-  padding: 10px 15px;
-  background: #ffa500;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
 }
 .conseils-page .intro {
   text-align: center;
@@ -638,16 +668,6 @@ footer a:hover {
   text-align: center;
   font-size: 2em;
   margin-bottom: 10px;
-}
-
-.test-detail a {
-  color: #ffa500;
-  font-weight: bold;
-  text-decoration: none;
-}
-.test-detail a:hover {
-  text-decoration: underline;
-  color: #e69500;
 }
 .test-detail table {
   width: 100%;
